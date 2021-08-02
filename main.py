@@ -5,6 +5,7 @@ import requests
 
 
 app = Flask(__name__)
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 Bootstrap(app)
 OW_ENDPOINT_1 = 'https://api.openweathermap.org/data/2.5/weather'
 OW_ENDPOINT_2 = 'https://api.openweathermap.org/data/2.5/onecall'
