@@ -41,7 +41,6 @@
 
   .card-img-top {
     margin-bottom: 1rem;
-    width: 3rem;
   }
 
 }
@@ -49,6 +48,9 @@
 @media (max-width: 970px) {
     p.description {
         display: none;
+    }
+    .card-img-top {
+        width: 3rem;
     }
 }
 
