@@ -11,6 +11,8 @@
   and (-webkit-min-device-pixel-ratio: 2) {
     .input {
         height: 2.5rem;
+        font-size: 1.3rem;
+        padding: 5px;
     }
 }
 
