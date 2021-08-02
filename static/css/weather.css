@@ -96,6 +96,10 @@ p {
 
 }
 
+.card-deck .card {
+    flex: none;
+}
+
 .card {
     flex: none;
     width: 20%;
