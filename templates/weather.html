@@ -43,7 +43,7 @@
                         <h2 class="weekday">{{  day.weekday[0]  }}</h2>
                         <img class="card-img-top" src="http://openweathermap.org/img/wn/{{  day.weather.0.icon  }}@2x.png" alt="Card image cap">
                         <div class="card-body">
-                            <p class="card-text">{{  day.weather.0.description  }}</p>
+                            <p class="description card-text">{{  day.weather.0.description  }}</p>
                             <p class="high card-text"><i class="fas fa-angle-up"></i> {{  day.temp.max|round|int  }}°C</p>
                             <p class="low card-text"><i class="fas fa-angle-down"></i> {{  day.temp.min|round|int  }}°C</p>
                         </div>
