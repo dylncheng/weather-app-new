@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block title %}Weather{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href="{{  url_for('static', filename='css/weather.css')  }}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    </style>
+{% endblock %}
+
+{% block content %}
+<!--    <div class="container-fluid">-->
+    <h1>{{  city|title  }}</h1>
+<!--        <h2>{{  current.temp|round|int  }} °C</h2>-->
+<!--    </div>-->
+    <div id="daily-forecast" class="carousel slide" data-interval="false">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card-deck">
+                    {% for day in daily[:4] %}
+                    <div class="card">
+                        <h2 class="weekday">{{  day.weekday[0]  }}</h2>
+                        <img class="card-img-top" src="http://openweathermap.org/img/wn/{{  day.weather.0.icon  }}@2x.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="description card-text">{{  day.weather.0.description  }}</p>
+                            <p class="card-text"><i class="fas fa-angle-up"></i> {{  day.temp.max|round|int  }}°C</p>
+                            <p class="card-text"><i class="fas fa-angle-down"></i> {{  day.temp.min|round|int  }}°C</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+<!--                <h2 class="carousel-data">{{  daily[0].temp.max|round|int  }} °C</h2>-->
+<!--                <img src="http://openweathermap.org/img/wn/{{  daily[0].weather.0.icon  }}@2x.png">-->
+<!--                <p class="carousel-data">{{  daily[0].weather.0.description  }}</p>-->
+<!--                <p class="carousel-data"><strong>{{  daily[0].weekday  }}</strong></p>-->
+            </div>
+            <div class="carousel-item">
+                <div class="card-deck">
+                    {% for day in daily[4:] %}
+                    <div class="card">
+                        <h2 class="weekday">{{  day.weekday[0]  }}</h2>
+                        <img class="card-img-top" src="http://openweathermap.org/img/wn/{{  day.weather.0.icon  }}@2x.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">{{  day.weather.0.description  }}</p>
+                            <p class="high card-text"><i class="fas fa-angle-up"></i> {{  day.temp.max|round|int  }}°C</p>
+                            <p class="low card-text"><i class="fas fa-angle-down"></i> {{  day.temp.min|round|int  }}°C</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+<!--            {% for day in daily[1:] %}-->
+<!--                <div class="carousel-item">-->
+<!--                    <h2 class="carousel-data">{{  day.temp.max|round|int  }} °C</h2>-->
+<!--                    <img src="http://openweathermap.org/img/wn/{{  day.weather.0.icon  }}@2x.png">-->
+<!--                    <p class="carousel-data">{{  day.weather.0.description  }}</p>-->
+<!--                    <p class="carousel-data"><strong>{{  day.weekday  }}</strong></p>-->
+<!--                </div>-->
+<!--            {% endfor %}-->
+        </div>
+        <a class="carousel-control-prev" href="#daily-forecast" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#daily-forecast" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+{% endblock %}
+{% block footer %}
+    <a href="{{  url_for('home')  }}">back to home</a>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Weather Forecast</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash;    <p>{{ weather_data }}</p>&ndash;&gt;-->
+<!--    <div class="container-fluid">-->
+<!--        <h1>{{  city  }}</h1>-->
+<!--        <h2>{{  current.temp|round|int  }} °C</h2>-->
+<!--    </div>-->
+<!--    <div id="daily-forecast" class="carousel slide" data-ride="carousel">-->
+<!--        <div class="carousel-inner">-->
+<!--            <div class="carousel-item active">-->
+
+<!--            </div>-->
+<!--            {% for day in daily[1:] %}-->
+<!--                <div class="carousel-item">-->
+<!--                    <h2>{{  day.temp.day|round|int  }} °C</h2>-->
+<!--                    <p>{{  day.weather.0.description  }}</p>-->
+<!--                </div>-->
+<!--            {% endfor %}-->
+
+<!--              </div>-->
+<!--              <a class="carousel-control-prev" href="#daily-forecast" role="button" data-slide="prev">-->
+<!--                <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--                <span class="sr-only">Previous</span>-->
+<!--              </a>-->
+<!--              <a class="carousel-control-next" href="#daily-forecast" role="button" data-slide="next">-->
+<!--                <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--                <span class="sr-only">Next</span>-->
+<!--              </a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</body>-->
+<!--</html>-->
