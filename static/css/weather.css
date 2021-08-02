@@ -93,6 +93,7 @@ p {
 
 .card-deck {
     justify-content: space-around;
+    flex-flow: row;
 
 }
 
