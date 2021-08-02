@@ -1,3 +1,11 @@
+@media (max-width: 970px) {
+    input {
+        line-height: 20;
+        font-size: 1rem;
+    }
+}
+
+
 html {
     height: 100%;
 }
