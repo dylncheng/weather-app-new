@@ -5,6 +5,15 @@
     }
 }
 
+@media only screen
+  and (min-device-width: 1366px)
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .input {
+        height: 2.5rem;
+    }
+}
+
 
 html {
     height: 100%;
