@@ -3,6 +3,10 @@
     margin-bottom: 5rem;
   }
   
+  footer {
+    bottom: 4rem;
+  }
+  
   .card-deck {
     flex-direction: row;
     display: flex
