@@ -1,4 +1,8 @@
 @media (max-width: 575.98px) {
+  h1 {
+    margin-bottom: 5rem;
+  }
+  
   .card-deck {
     flex-direction: row;
     display: flex
