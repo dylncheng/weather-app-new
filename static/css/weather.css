@@ -113,6 +113,10 @@ p {
     margin: 0 auto;
 }
 
+.date-number {
+    color: #3d3a3a;
+}
+
 strong {
     font-weight: bold;
 }
