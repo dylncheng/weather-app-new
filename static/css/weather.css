@@ -3,10 +3,6 @@
     margin-bottom: 5rem;
   }
   
-  footer {
-    bottom: 4rem;
-  }
-  
   .card-deck {
     flex-direction: row;
     display: flex
@@ -134,7 +130,7 @@ footer {
     text-align: center;
     background-color: #333333;
     position: absolute;
-    height: 2rem;
+    height: 3.5rem;
     bottom: 0;
 }
 
