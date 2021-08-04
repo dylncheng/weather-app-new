@@ -22,6 +22,7 @@
                     {% for day in daily[:4] %}
                     <div class="card">
                         <h2 class="weekday">{{  day.weekday[0]  }}</h2>
+                        <p class="date-number">{{  day.number  }}</p>
                         <img class="card-img-top" src="http://openweathermap.org/img/wn/{{  day.weather.0.icon  }}@2x.png" alt="Card image cap">
                         <div class="card-body">
                             <p class="description card-text">{{  day.weather.0.description  }}</p>
@@ -41,6 +42,7 @@
                     {% for day in daily[4:] %}
                     <div class="card">
                         <h2 class="weekday">{{  day.weekday[0]  }}</h2>
+                        <p class="date-number">{{  day.number  }}</p>
                         <img class="card-img-top" src="http://openweathermap.org/img/wn/{{  day.weather.0.icon  }}@2x.png" alt="Card image cap">
                         <div class="card-body">
                             <p class="description card-text">{{  day.weather.0.description  }}</p>
