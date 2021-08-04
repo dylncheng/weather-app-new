@@ -53,7 +53,7 @@ def get_weather():
     weather_data = response.json()
     for date in weather_data['daily']:
         date['weekday'] = datetime.fromtimestamp(date['dt']).strftime("%A")
-        date['number'] = datetime.fromtimestamp(date['dt']).strftime("%d")
+        date['number'] = int(datetime.fromtimestamp(date['dt']).strftime("%d"))
         # print(date['weekday'])
     # print(weather_data)
     return render_template('weather.html', current=weather_data['current'], hourly=weather_data['hourly'], daily=weather_data['daily'], city=city)
