@@ -10,6 +10,9 @@
             {{  bootstrap.load_css()  }}
 
         {% endblock %}
+        <link rel="icon"
+            type="image/png"
+            href="{{  url_for('static', filename='images/favicon.ico')  }}">
         <title>{%  block title %}{% endblock %}</title>
     </head>
     <body>
