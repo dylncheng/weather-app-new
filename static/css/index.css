@@ -1,17 +1,6 @@
-@media (max-width: 970px) {
+@media (max-width: 1366px) {
     .input {
         font-size: 1rem;
-        padding: 5px;
-    }
-}
-
-@media only screen
-  and (min-device-width: 1366px)
-  and (max-device-width: 1366px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .input {
-        height: 2.5rem;
-        font-size: 1.3rem;
         padding: 5px;
     }
 }
