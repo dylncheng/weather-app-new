@@ -11,10 +11,11 @@
 {% endblock %}
 
 {% block content %}
-<!--    <div class="container-fluid">-->
-    <h1>{{  city|title  }}</h1>
-<!--        <h2>{{  current.temp|round|int  }} °C</h2>-->
-<!--    </div>-->
+
+    <div class="container-fluid">
+        <h1>{{  city|title  }}</h1>
+        <p>Current temp is: {{  current.temp|round|int  }}°C</p>
+    </div>
     <div id="daily-forecast" class="carousel slide" data-interval="false">
         <div class="carousel-inner">
             <div class="carousel-item active">

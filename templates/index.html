@@ -9,8 +9,20 @@
     </style>
 {% endblock %}
 {% block content %}
-    <h1>enter a city:</h1>
     <form action="{{  url_for('home')  }}" method="POST">
+        <nav class="navbar">
+<!--            <a class="navbar-brand" href="#"><i class="fas fa-globe disabled"></i> :</a>-->
+            <select class="form-control form-control-sm" name="country" id="country">
+                {% for country in countries %}
+                {% if country == default %}
+                <option value="{{  country  }}" selected="selected">{{  country  }}</option>
+                {% else %}
+                <option value="{{  country  }}">{{  country  }}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+        </nav>
+        <h1>enter a city:</h1>
         <input class="input" type="text" name="city" autocomplete="off" spellcheck="false">
         <p class="error">{{  error  }}</p>
 <!--      <button type="submit">Submit</button>-->
