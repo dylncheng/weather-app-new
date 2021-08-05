@@ -19,6 +19,8 @@ country_dict = {}
 
 def get_countries():
     global country_dict
+    global COUNTRY
+    COUNTRY = 'Canada'
     with open('static/data/countries.csv', encoding='utf-8') as data_file:
         data_list = data_file.readlines()
         for i in range(len(data_list)):
@@ -27,6 +29,7 @@ def get_countries():
         for line in data_list[1:]:
             country_list = line.split(',')
             country_dict[country_list[0]] = country_list[1]
+
 
 @app.route('/', methods=["GET", "POST"])
 def home():
