@@ -3,6 +3,11 @@
         font-size: 1.2rem;
         padding: 5px;
     }
+
+    #country {
+    margin: 0 auto;
+    }
+
 }
 
 
@@ -64,6 +69,7 @@ input {
     background: #C4C4C4;
     font-family: 'Ubuntu Mono', sans-serif;
     color: #333333;
+    -webkit-appearance: none;
 }
 
 
