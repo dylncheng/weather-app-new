@@ -40,6 +40,7 @@ input {
     font-family: 'Ubuntu Mono', sans-serif;
     font-size: 1.5rem;
     color: #333333;
+    -webkit-appearance: none;
 }
 
 .error {
