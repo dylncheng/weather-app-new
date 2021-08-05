@@ -4,10 +4,6 @@
         padding: 5px;
     }
 
-    #country {
-    margin: 0 auto;
-    }
-
 }
 
 
@@ -58,14 +54,14 @@ input {
 .navbar {
     position: absolute;
     top: 2rem;
-    right: 1rem;
+    left: 1rem;
 }
 
 
 #country {
-    width: 16rem;
-    height: 2rem;
-    font-size: 0.7rem;
+    width: 14.5rem;
+    height: 2.3rem;
+    font-size: 0.9rem;
     background: #C4C4C4;
     font-family: 'Ubuntu Mono', sans-serif;
     color: #333333;
