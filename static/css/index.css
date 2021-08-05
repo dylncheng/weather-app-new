@@ -44,7 +44,7 @@ input {
 }
 
 input:focus {
-    -webkit-appearance: none;
+  outline: none;
 }
 
 .error {
