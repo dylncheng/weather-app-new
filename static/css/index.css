@@ -43,6 +43,10 @@ input {
     -webkit-appearance: none;
 }
 
+input:focus {
+    -webkit-appearance: none;
+}
+
 .error {
   color: #971414;
   font-weight: bold;
