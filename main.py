@@ -19,8 +19,6 @@ country_dict = {}
 
 def get_countries():
     global country_dict
-    global COUNTRY
-    COUNTRY = 'Canada'
     with open('static/data/countries.csv', encoding='utf-8') as data_file:
         data_list = data_file.readlines()
         for i in range(len(data_list)):
@@ -39,6 +37,8 @@ def home():
         error = request.args.get('error', default=None, type=None)
         if not error:
             error = ""
+        COUNTRY = request.args.get('country', default='Canada', type=None)
+
         return render_template('index.html', error=error, countries=country_dict.keys(), default=COUNTRY)
     else:
         COUNTRY = request.form['country']
@@ -49,6 +49,8 @@ def home():
 
 @app.route('/weather')
 def get_weather():
+    global COUNTRY
+    COUNTRY = request.args.get('country')
     city = request.args.get('city')
     country = request.args.get('country')
     params_1 = {
