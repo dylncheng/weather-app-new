@@ -58,7 +58,9 @@ input {
 
 
 #country {
-    width: 14rem;
+    width: 16rem;
+    height: 2rem;
+    font-size: 0.7rem;
     background: #C4C4C4;
     font-family: 'Ubuntu Mono', sans-serif;
     color: #333333;
