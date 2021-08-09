@@ -1,6 +1,6 @@
-@media (max-width: 575.98px) {
-  .container-fluid {
-    margin-bottom: 5rem;
+@media (max-width: 900px) {
+  div.container-fluid {
+    margin-bottom: 1rem;
   }
 
   .card-deck {
@@ -46,7 +46,7 @@
   img.card-img-top {
     width: 3rem;
     margin: 0 auto;
-}
+  }
 
 }
 
@@ -55,6 +55,20 @@
         display: none;
     }
 
+}
+
+@media (max-width: 570px) {
+    div.container-fluid {
+        margin-bottom: 0.55rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #footer {
+        height: 2.5rem;
+    }
 }
 
 
