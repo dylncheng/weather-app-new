@@ -57,7 +57,7 @@
 
 }
 
-@media (max-width: 570px) {
+@media (max-width: 737px) {
     div.container-fluid {
         margin-bottom: 0.55rem;
     }
