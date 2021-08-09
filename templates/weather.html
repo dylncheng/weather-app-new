@@ -13,7 +13,7 @@
 {% block content %}
 
     <div class="container-fluid">
-        <h1>{{  city|title  }}</h1>
+        <h1 class="title">{{  city|title  }}</h1>
         <p>Current temp is: {{  current.temp|round|int  }}°C</p>
     </div>
     <div id="daily-forecast" class="carousel slide" data-interval="false">

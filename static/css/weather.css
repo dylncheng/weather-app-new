@@ -57,13 +57,13 @@
 
 }
 
-@media (max-width: 737px) {
+@media (max-width: 850px) {
     div.container-fluid {
         margin-bottom: 0.55rem;
     }
 
-    h1 {
-        font-size: 1.6rem;
+    h1.title {
+        font-size: 2rem;
     }
 
     #footer {
