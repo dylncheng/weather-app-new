@@ -5,11 +5,10 @@
 
   .card-deck {
     flex-direction: row;
-    display: flex
+    display: flex;
   }
 
   div.card {
-    flex-shrink: 2;
     width: 20%;
   }
 
@@ -70,6 +69,10 @@
     #footer {
         height: 2.5rem;
     }
+
+    div.card-deck {
+        margin: 0 0.3rem;
+    }
 }
 
 
@@ -117,6 +120,7 @@ p {
 .card-deck {
     justify-content: space-around;
     flex-flow: row;
+    margin: 0 0.5rem;
 
 }
 
