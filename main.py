@@ -11,7 +11,6 @@ Bootstrap(app)
 OW_ENDPOINT_1 = 'https://api.openweathermap.org/data/2.5/weather'
 OW_ENDPOINT_2 = 'https://api.openweathermap.org/data/2.5/onecall'
 OW_API_KEY = os.environ['API_KEY']
-# OW_API_KEY = '1b51a0d76b8c833467e07f4b689bee53'
 
 COUNTRY = 'Canada'
 
