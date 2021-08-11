@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, request, url_for
 from flask_bootstrap import Bootstrap
 from datetime import datetime
 import requests
-import pandas as pd
+import os
 
 
 app = Flask(__name__)
@@ -10,7 +10,8 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 Bootstrap(app)
 OW_ENDPOINT_1 = 'https://api.openweathermap.org/data/2.5/weather'
 OW_ENDPOINT_2 = 'https://api.openweathermap.org/data/2.5/onecall'
-OW_API_KEY = '1b51a0d76b8c833467e07f4b689bee53'
+OW_API_KEY = os.environ['API_KEY']
+# OW_API_KEY = '1b51a0d76b8c833467e07f4b689bee53'
 
 COUNTRY = 'Canada'
 
