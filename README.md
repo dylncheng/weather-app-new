@@ -1,6 +1,6 @@
 # Yuki Weather App https://weather-app-newest.herokuapp.com/
 
-#### This project was created with the purpose of creating a weather app without any unecessary feautures and with a minimalistic design
+#### This project was created with the purpose of creating a weather app with a minimalistic design
 
 #### The website serves a REST API written with Flask and a HTML/CSS/Bootsrap front-end
 
@@ -9,7 +9,7 @@
 > - CSS3
 > - Bootsrap 4
 > - Flask
-> - Pandas
+> - pandas
 
 
 
